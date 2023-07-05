@@ -21,7 +21,7 @@ h1 {
 
 input{
     min-width: 600px;
-    height: 2rem;
+    height: 1.6rem;
     border-radius: 10px 0 10px 0;
     border: solid 2px rgb(89, 199, 183);
     padding-left:  1rem;
@@ -31,13 +31,61 @@ input{
 }
 
 ::placeholder {
-    color: rgb(89, 199, 183);
+    color: rgba(127, 169, 247, 0.988);
 }
 
 button{
     width: 200px;
     height: 2rem;
-    background:  rgb(89, 199, 183);
+    background:  rgba(127, 169, 247, 0.988);
     border: none;
     color: aliceblue;
+
+}
+
+.todo-container{
+    min-width: 800px;
+    color:  rgb(0, 0, 0);
+    border-radius: 10px 0 10px 0;
+    border: solid 2px rgb(89, 199, 183);
+    padding-left:  1rem;
+    font-size: 1rem;
+    outline: none; 
+    height: 4rem;
+    background: #eee;
+    display: inline-block;
+
+}
+.todo-value{
+    font-size: 1.5rem;
+    align-items:  center;
+    margin-top: 0.5em;
+
+}
+.todo-delete{
+    width: 50px;
+    height: 0.5rem;
+    display: flex;
+    border: 1px solid rgba(248, 0, 0, 0.622);
+    padding: 10px 20px;
+    background-color: rgba(248, 0, 0, 0.622);
+    color: #eee;
+    text-decoration: none;
+    margin-left: 43em;
+    margin-top: -1.35em;
+    align-items: center;
+
+}
+.todo-update{
+    width: 50px;
+    height: 0.5rem;
+    display: flex;
+    border: 1px solid rgb(89, 199, 183);
+    padding: 10px 20px;
+    background-color: rgb(89, 199, 183);
+    color: #eee;
+    text-decoration: none;
+    margin-left: 38em;
+    margin-top: -1.87em;
+    align-items:  center;
 }
