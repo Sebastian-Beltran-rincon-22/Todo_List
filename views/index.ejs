@@ -14,6 +14,48 @@
             <button type="submit">Add</button>
 
         </form>
+
+        <% if (data) { %>
+            <% data.forEach(todoValue => {%>
+                <div class = "todo-container">
+                    <div class = "todo-value"><%= todoValue.todo %> </div>
+                    <div>
+                        <a class="todo-delete  <%= todoValue.id %>">Delete</a>
+                    </div>
+                    <div>
+                        <a class="todo-update  <%= todoValue.id %>">Update</a>
+                        
+                    </div>
+                </div>
+            <% })%>
+        <%}%>
+
     </div>
+
+    <script>
+        const deleteButton = document.querySelectorAll(".todo-delete")
+
+        deleteButton.forEach((button, i) => {
+            button.addEventListener("click",() =>{
+                const endPoint = `/${button.classList[1]}` 
+                fetch(endPoint,{
+                    method: "DELETE"
+                })
+                window.location.href = "/"
+            })
+        })
+
+        const updateButton = document.querySelectorAll(".todo-update")
+
+        updateButton.forEach((button, i) => {
+            button.addEventListener("click",() =>{
+                const endPoint = `/${button.classList[1]}` 
+                fetch(endPoint,{
+                    method: "UPDATE"
+                })
+                window.location.href = "/"
+            })
+        })
+    </script>
 </body>
 </html>
