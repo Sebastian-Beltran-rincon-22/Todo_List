@@ -52,6 +52,7 @@ $ git remote add origin <nueva_url_del_repositorio>
 ```bash
 $ npm i
 ```
+5 Debe crear un archivo (.env) en la ruta raiz del proyecto y en el crear una variable de entorno llamada (MONGO_DB_URI) y se le agrega la conexion a su cluster de Mongo
 
 ## Uso
 
