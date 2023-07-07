@@ -22,7 +22,7 @@
                 <div class="todo-value"><%= todoValue.todo %></div>
                 <div>
                     <form action="/<%= todoValue.id %>" method="POST" class="todo-update-form">
-                        <input type="text" name="todoValue" placeholder="Update ToDo..." required>
+                        <input class="update-list"type="text" name="todoValue" placeholder="Update ToDo..." required>
                         <button class="todo-update" type="submit">Update</button>
                     </form>
                 </div>
