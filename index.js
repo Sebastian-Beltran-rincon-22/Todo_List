@@ -32,7 +32,25 @@ app.get("/",(req, res) => {
         console.log(result)
     })
 })
+////
+app.get("/:id", (req, res) => {
+    const todoId = req.params.id;
+    Todo.findById(todoId)
+    .then(todo => {
+        if (!todo) {
+        res.status(404).send('Documento no encontrado.');
+        return;
+        }
 
+        res.render('update', { todo });
+    })
+    .catch(error => {
+        console.error(error);
+        res.status(500).send('Error al buscar el documento.');
+    });
+});
+
+////
 app.post("/",(req,res) => {
     const todo = new Todo({
         todo: req.body.todoValue
@@ -44,14 +62,37 @@ todo.save()
 })
 })
 
-app.patch('/:id',(req,res) =>{
-    const todo = Todo.updateOne({
-        todo: req.body.todoValue
+
+app.post("/:id", (req, res) => {
+    const todoId = req.params.id;
+    const updatedTodo = req.body.todoValue;
+
+    Todo.findByIdAndUpdate({ _id: todoId }, { todo: updatedTodo })
+    .then(() => {
+        res.redirect("/");
     })
-todo.save()
-.then(result =>{
-res.redirect("/update/:id")
-})
+    .catch(error => {
+        console.error(error);
+        res.status(500).send('Error al actualizar la información.');
+    });
+});
+
+
+///
+
+app.patch('/:id', (req, res) => {
+    const todoId = req.params.id
+    const todoValue = req.body.todoValue
+
+    Todo.updateOne({ _id: todoId }, { todo: todoValue })
+    .then(() => {
+        res.redirect(`/update/${todoId}`);
+    })
+    .catch(error => {
+        // Manejo de errores
+        console.error(error);
+        res.status(500).send('Error al actualizar la información.');
+    })
 })
 
 app.delete('/:id',(req,res)=>{
