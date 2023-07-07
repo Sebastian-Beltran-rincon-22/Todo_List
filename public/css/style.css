@@ -32,6 +32,12 @@ input{
     font-family: 'Open Sans', sans-serif !important;
 }
 
+.update-list{
+    color:  rgb(0, 0, 0);
+    background: #8f8f8f33;
+    min-width: 500px;
+}
+
 ::placeholder {
     color: rgba(133, 141, 136, 0.988);
 }
@@ -106,7 +112,7 @@ button{
     color: #bebbbb;
     text-decoration: none;
     margin-left: 34em;
-    margin-top: -1.50em;
+    margin-top: -3.00em;
     align-items: center;
     font-family: 'Open Sans', sans-serif !important;
     padding-left:  22px;
