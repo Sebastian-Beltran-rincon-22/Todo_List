@@ -4,6 +4,7 @@
 }
 body {
     background: rgb(136, 131, 131);
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .container {
@@ -28,6 +29,7 @@ input{
     color:  rgb(0, 0, 0);
     font-size: 1rem;
     outline: none;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 ::placeholder {
@@ -40,6 +42,7 @@ button{
     background:  rgba(127, 169, 247, 0.988);
     border: none;
     color: aliceblue;
+    font-family: 'Open Sans', sans-serif !important;
 
 }
 
@@ -51,9 +54,10 @@ button{
     padding-left:  1rem;
     font-size: 1rem;
     outline: none; 
-    height: 4rem;
+    height: 5rem;
     background: #eee;
     display: inline-block;
+    
 
 }
 .todo-value{
@@ -64,7 +68,7 @@ button{
 }
 .todo-delete{
     width: 50px;
-    height: 0.5rem;
+    height: 1rem;
     display: flex;
     border: 1px solid rgba(248, 0, 0, 0.622);
     padding: 10px 20px;
@@ -72,20 +76,21 @@ button{
     color: #eee;
     text-decoration: none;
     margin-left: 43em;
-    margin-top: -1.35em;
+    margin-top: -2.4em;
     align-items: center;
 
 }
 .todo-update{
-    width: 50px;
-    height: 0.5rem;
+    width: 100px;
+    height: 2.4rem;
     display: flex;
-    border: 1px solid rgb(89, 199, 183);
+    border: 1px solid rgba(0, 248, 165, 0.622);
     padding: 10px 20px;
-    background-color: rgb(89, 199, 183);
+    background-color: rgba(0, 244, 248, 0.622);
     color: #eee;
     text-decoration: none;
-    margin-left: 38em;
-    margin-top: -1.87em;
-    align-items:  center;
+    margin-left: 43em;
+    margin-top: -1.50em;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif !important;
 }
