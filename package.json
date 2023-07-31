@@ -5,7 +5,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "index.js": "^0.0.3",
-    "mongoose": "^7.3.1"
+    "moongose": "^1.0.0"
   },
   "name": "todo_list",
   "version": "1.0.0",
@@ -21,7 +21,7 @@
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nodemon": "^2.0.22",
+    "nodemon": "^3.0.1",
     "prettier": "^2.8.8"
   }
 }
