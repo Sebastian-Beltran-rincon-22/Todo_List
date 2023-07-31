@@ -5,7 +5,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "index.js": "^0.0.3",
-    "moongose": "^1.0.0"
+    "mongoose": "^7.3.1"
   },
   "name": "todo_list",
   "version": "1.0.0",

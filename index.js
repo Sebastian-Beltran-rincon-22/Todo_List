@@ -20,7 +20,6 @@ app.use(bodyParser.json())
 
 
 // ConectMongo
-const dburl = "mongodb://localhost:27017/tododb"
 mongoose.connect(process.env.MONGO_DB_URI)
 
 //Get page
